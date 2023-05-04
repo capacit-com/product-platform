@@ -46,7 +46,7 @@
         </div>
         <div class="flex flex-1 justify-end">
           <a
-            href="#"
+            href="#c"
             class="text-sm px-10 py-4 font-semibold leading-6 rounded-md hover:shadow-sm text-gray-900 hover:bg-slate-100"
             >Log in <span aria-hidden="true">&rarr;</span></a
           >
@@ -585,7 +585,7 @@
                   </ul>
                 </div>
                 <a
-                  href="#"
+                  href="#c"
                   aria-describedby="tier-freelancer"
                   class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300"
                   >Buy plan</a
@@ -641,7 +641,7 @@
                   </ul>
                 </div>
                 <a
-                  href="#"
+                  href="#b"
                   aria-describedby="tier-startup"
                   class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 bg-indigo-600 text-white shadow-sm hover:bg-indigo-500"
                   >Buy plan</a
@@ -692,7 +692,7 @@
                   </ul>
                 </div>
                 <a
-                  href="#"
+                  href="#a"
                   aria-describedby="tier-enterprise"
                   class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300"
                   >Buy plan</a
@@ -783,7 +783,6 @@
       >
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="flex gap-8">
-          
           <div class="text-sm font-semibold leading-6 text-gray-900">
             {content.footer.copyright}
           </div>
