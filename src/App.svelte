@@ -3,6 +3,17 @@
 
   import content from "./assets/content.json";
 
+  import * as amplitude from "@amplitude/analytics-browser";
+
+  amplitude.init("4ff9a59e6d16278ed6926a3a4b395676", undefined, {
+    defaultTracking: {
+      sessions: true,
+      pageViews: true,
+      formInteractions: true,
+      fileDownloads: true,
+    },
+  });
+
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
@@ -12,6 +23,7 @@
       top: anchor.offsetTop - 50,
       behavior: "smooth",
     });
+    amplitude.track(event.currentTarget);
   }
 </script>
 
