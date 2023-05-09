@@ -18,6 +18,7 @@
         "image": "hero-image.png"
     },
     "features": {
+        "showFeatures": false,
         "pretitle": "{feature.pretitle}",
         "title": "Feature title {feature.title}",
         "subtitle": "Feature subtitle {feature.subtitle}",
@@ -45,6 +46,7 @@
         ]
     },
     "solution": {
+        "showSolution": true,
         "pretitle": "{solution.pretitle}",
         "title": "{solution.title}",
         "subtitle": "{solution.subtitle}",
@@ -89,6 +91,7 @@
         "inputPlaceHolder": "{newsletter.inputPlaceHolder}"
     },
     "testimonials": {
+        "showTestimonials": true,
         "pretitle": "{testimonials.pretitle}",
         "title": "{testimonials.title}",
         "testimonial0": {
@@ -162,6 +165,7 @@
         }
     },
     "faq": {
+        "showFaq": true,
         "questions": [
             {
                 "question": "What is your product?",

@@ -1,12 +1,12 @@
 <script>
+  import { onMount } from "svelte";
+
   // @ts-nocheck
 
   import content from "./assets/content.json";
 
   import * as amplitude from "@amplitude/analytics-browser";
-
   amplitude.init("4ff9a59e6d16278ed6926a3a4b395676", undefined, {
-    serverZone: "EU",
     defaultTracking: {
       sessions: true,
       pageViews: true,
@@ -14,21 +14,24 @@
       fileDownloads: true,
     },
   });
+  let email = "";
 
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
     const anchorId = new URL(link.href).hash.replace("#", "");
     const anchor = document.getElementById(anchorId);
+
     window.scrollTo({
       top: anchor.offsetTop - 50,
       behavior: "smooth",
     });
-    console.log(anchorId);
-    amplitude.track(event.currentTarget, {
-      button_text: anchorId,
-      time: new Date(),
-    });
+    amplitude.track(anchorId);
+  }
+
+  function handleSubmitSignup(event) {
+    event.preventDefault();
+    amplitude.track("submit-sign-up", { email });
   }
 </script>
 
@@ -50,7 +53,7 @@
         </div>
         <div class="flex gap-12">
           {#each content.header.links as headerItem}
-            {#if headerItem.sectionLink === "pricing" && !content.pricing.showPricingSection}
+            {#if (headerItem.sectionLink === "pricing" && !content.pricing.showPricingSection) || (headerItem.sectionLink === "features" && !content.features.showFeatures)}
               <p />
             {:else}
               <a
@@ -136,120 +139,127 @@
       </div>
 
       <!-- Feature section -->
-      <div id="features" class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">
-            {content.features.pretitle}
-          </h2>
-          <p
-            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >
-            {content.features.title}
-          </p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            {content.features.subtitle}
-          </p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl
-            class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
-          >
-            {#each content.features.features as feature}
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div
-                    class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
-                  >
-                    <!--TODO Add icon somehow -->
-                    <svg
-                      class="h-6 w-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
-                      />
-                    </svg>
-                  </div>
-                  {feature.title}
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600">
-                  {feature.description}
-                </dd>
-              </div>
-            {/each}
-          </dl>
-        </div>
-      </div>
-
-      <!-- Feature section -->
-      <div class="mt-32 sm:mt-56">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl sm:text-center">
+      {#if content.features.showFeatures}
+        <div
+          id="features"
+          class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8"
+        >
+          <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-base font-semibold leading-7 text-indigo-600">
-              {content.solution.pretitle}
+              {content.features.pretitle}
             </h2>
             <p
               class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
-              {content.solution.title}
+              {content.features.title}
             </p>
             <p class="mt-6 text-lg leading-8 text-gray-600">
-              {content.solution.subtitle}
+              {content.features.subtitle}
             </p>
           </div>
-        </div>
-        <div class="relative overflow-hidden pt-16">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <img
-              src="/{content.solution.image}"
-              alt="App screenshot"
-              class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-              width="2432"
-              height="1442"
-            />
-            <div class="relative" aria-hidden="true">
-              <div
-                class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"
-              />
-            </div>
+          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <dl
+              class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+            >
+              {#each content.features.features as feature}
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div
+                      class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+                    >
+                      <!--TODO Add icon somehow -->
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    {feature.title}
+                  </dt>
+                  <dd class="mt-2 text-base leading-7 text-gray-600">
+                    {feature.description}
+                  </dd>
+                </div>
+              {/each}
+            </dl>
           </div>
         </div>
-        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-          <dl
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
-          >
-            {#each content.solution.features as feature}
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
-                  <!--TODO Add icon somehow -->
-                  <svg
-                    class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  {feature.title}
-                </dt>
-                <dd class="inline">
-                  {feature.description}
-                </dd>
+      {/if}
+
+      <!-- Solution section -->
+      {#if content.solution.showSolution}
+        <div class="mt-32 sm:mt-56">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl sm:text-center">
+              <h2 class="text-base font-semibold leading-7 text-indigo-600">
+                {content.solution.pretitle}
+              </h2>
+              <p
+                class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                {content.solution.title}
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                {content.solution.subtitle}
+              </p>
+            </div>
+          </div>
+          <div class="relative overflow-hidden pt-16">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <img
+                src="/{content.solution.image}"
+                alt="App screenshot"
+                class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+                width="2432"
+                height="1442"
+              />
+              <div class="relative" aria-hidden="true">
+                <div
+                  class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"
+                />
               </div>
-            {/each}
-          </dl>
+            </div>
+          </div>
+          <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+            <dl
+              class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
+            >
+              {#each content.solution.features as feature}
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <!--TODO Add icon somehow -->
+                    <svg
+                      class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    {feature.title}
+                  </dt>
+                  <dd class="inline">
+                    {feature.description}
+                  </dd>
+                </div>
+              {/each}
+            </dl>
+          </div>
         </div>
-      </div>
+      {/if}
 
       <!-- Newsletter section -->
       <div
@@ -269,8 +279,12 @@
           >
             {content.newsletter.subtitle}
           </p>
-          <form class="mx-auto mt-10 flex max-w-md gap-x-4">
+          <form
+            class="mx-auto mt-10 flex max-w-md gap-x-4"
+            on:submit={handleSubmitSignup}
+          >
             <input
+              bind:value={email}
               id="email-address"
               name="email"
               type="email"
