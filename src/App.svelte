@@ -12,7 +12,7 @@
     },
   });
   let email = "";
-
+  let isLoading = false;
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
@@ -27,8 +27,13 @@
   }
 
   function handleSubmitSignup(event) {
+    isLoading = true;
     event.preventDefault();
     amplitude.track("submit-sign-up", { email });
+    setTimeout(() => {
+      email = "";
+    }, 400);
+    isLoading = false;
   }
 
   function handleLoginClick(event) {
@@ -296,11 +301,41 @@
               class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
               placeholder="Enter email"
             />
-            <button
-              type="submit"
-              class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >{content.newsletter.buttonText}</button
-            >
+            {#if isLoading}
+              <button
+                type="submit"
+                class="relative flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                <span class="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    class="animate-spin h-5 w-5 text-gray-600"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      class="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    />
+                    <path
+                      class="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.411 3.589 8 8 8v-2.009c-2.377 0-4.535-.981-6.104-2.569l1.504-1.501z"
+                    />
+                  </svg>
+                </span>
+                <span class="relative">Loading</span>
+              </button>
+            {:else}
+              <button
+                type="submit"
+                class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >{content.newsletter.buttonText}
+              </button>
+            {/if}
           </form>
           <svg
             viewBox="0 0 1024 1024"
