@@ -3,50 +3,50 @@
         "logo": "/images/logo.svg",
         "links": [
             {
-                "text": "Features {header.links}",
+                "text": "Features",
                 "sectionLink": "features"
             },
             {
-                "text": "Pricing {header.links}",
-                "sectionLink": "pricing"
+                "text": "Faq",
+                "sectionLink": "faq"
             }
         ]
     },
     "hero": {
-        "title": "Welcome to Our SaaS Product {hero.title}",
+        "title": "Scriptive - transcending soundscapes into textual masterpieces",
         "subtitle": "Get started today and see the results for yourself. {hero.subtitle}",
-        "image": "hero-image.png"
+        "image": "scriptive_first.png"
     },
     "features": {
-        "showFeatures": false,
-        "pretitle": "{feature.pretitle}",
-        "title": "Feature title {feature.title}",
-        "subtitle": "Feature subtitle {feature.subtitle}",
+        "showFeatures": true,
+        "pretitle": "Features",
+        "title": "Unleash the Power of Scriptive: Cutting-Edge Features for Exceptional Transcription",
+        "subtitle": "Discover how our innovative features simplify and elevate your transcription experience, setting a new standard for accuracy and efficiency.",
         "features": [
             {
-                "title": "Feature 0 {features.features[0].title}",
-                "description": "{features.features[0].description}",
-                "icon": "{features.features[0].icon}"
+                "title": "Real-Time Transcription",
+                "description": "Experience the power of real-time transcription with Scriptive, enabling you to view and edit your transcripts as they're being generated, ensuring a seamless workflow.",
+                "icon": "M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
             },
             {
-                "title": "Feature 1 {features.features[1].title}",
-                "description": "{features.features[1].description}",
-                "icon": "{features.features[1].icon}"
+                "title": "Customizable Output Formats",
+                "description": "Tailor your transcripts with customizable options such as speaker identification, timestamps, and punctuation preferences to suit your specific needs and improve readability.",
+                "icon": "M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
             },
             {
-                "title": "Feature 2 {features.features[2].title}",
-                "description": "{features.features[2].description}",
-                "icon": "{features.features[2].icon}"
+                "title": "Multi-Language Support",
+                "description": "Scriptive is designed to accommodate a wide variety of languages and dialects, catering to users across the globe and ensuring accurate transcriptions for diverse audio content.",
+                "icon": "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
             },
             {
-                "title": "Feature 3 {features.features[3].title}",
-                "description": "{features.features[3].description}",
-                "icon": "{features.features[3].icon}"
+                "title": "Collaboration Tools",
+                "description": "Share your transcripts with colleagues and collaborators, and work together on editing and refining your text in real-time, enhancing productivity and teamwork.",
+                "icon": "M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
             }
         ]
     },
     "solution": {
-        "showSolution": true,
+        "showSolution": false,
         "pretitle": "{solution.pretitle}",
         "title": "{solution.title}",
         "subtitle": "{solution.subtitle}",
@@ -85,13 +85,13 @@
         ]
     },
     "newsletter": {
-        "title": "{newsletter.title}",
-        "subtitle": "{newsletter.subtitle}",
-        "buttonText": "{newsletter.buttonText}",
+        "title": "Early Access Sign Up",
+        "subtitle": "Be among the first to experience Scriptive! Enter your email to join our waiting list and get exclusive access once the product is ready.",
+        "buttonText": "Join Waiting List",
         "inputPlaceHolder": "{newsletter.inputPlaceHolder}"
     },
     "testimonials": {
-        "showTestimonials": true,
+        "showTestimonials": false,
         "pretitle": "{testimonials.pretitle}",
         "title": "{testimonials.title}",
         "testimonial0": {
@@ -126,7 +126,7 @@
         }
     },
     "pricing": {
-        "showPricingSection": true,
+        "showPricingSection": false,
         "pretitle": "{pricing.pretitle}",
         "title": "{pricing.title}",
         "subtitle": "{pricing.subtitle}",
@@ -168,30 +168,22 @@
         "showFaq": true,
         "questions": [
             {
-                "question": "What is your product?",
-                "answer": "Our product is a cloud-based software as a service (SaaS) platform that helps businesses manage their sales and customer relationship management (CRM) processes more efficiently."
+                "question": "What is Scriptive and how does it work?",
+                "answer": "Scriptive is a cutting-edge SaaS platform that effortlessly transforms audio content into well-structured text, utilizing advanced AI algorithms and speech recognition technology to deliver exceptional accuracy and efficiency."
             },
             {
-                "question": "How does your product work?",
-                "answer": "Our product offers a variety of features, including lead management, sales forecasting, pipeline tracking, and customer analytics, to help businesses streamline their sales and CRM processes. Users can access the platform through any web browser, and our software is designed to be intuitive and user-friendly."
+                "question": " Can Scriptive handle multiple languages and accents",
+                "answer": "Absolutely! Scriptive is designed to recognize and process a wide variety of languages and accents, ensuring seamless transcription for users around the world."
             },
             {
-                "question": "Who is your product designed for?",
-                "answer": "Our product is designed for businesses of all sizes, from small startups to large enterprises, that need a powerful and flexible sales and CRM tool. Our platform is particularly well-suited for businesses that want to manage their sales and customer relationships more efficiently and effectively, without having to invest in expensive on-premise software or hardware."
-            },
-            {
-                "question": "What are some of the benefits of using your product?",
-                "answer": "Some of the key benefits of using our product include increased efficiency and productivity, better tracking and management of leads and sales, improved customer relationships, and access to valuable insights and analytics. Our platform is designed to help businesses save time and money, while also providing them with the tools they need to succeed in today's competitive marketplace."
-            },
-            {
-                "question": "What kind of support do you offer for your product?",
-                "answer": "We offer a variety of support options for our product, including email support, phone support, and online chat support. Our support team is available 24/7 to answer questions, provide guidance, and help users get the most out of our platform. We also offer a comprehensive knowledge base and online documentation to help users troubleshoot common issues and learn more about our software."
+                "question": "How secure is my data on Scriptive?",
+                "answer": "We prioritize your data security at Scriptive. Our platform employs end-to-end encryption, GDPR compliance, and stringent access controls to safeguard your files and maintain your privacy."
             }
         ]
     },
     "endSalesPoint": {
-        "title": "{endSalesPoint.title}",
-        "subtitle": "{endSalesPoint.subtitle}"
+        "title": "Transform Your Audio Experience Today",
+        "subtitle": "Don't miss out on the future of transcription. Join Scriptive and revolutionize the way you convert sound to text, saving time and increasing productivity."
     },
     "footer": {
         "copyright": "Copyright Capacit A/S © 2023",
