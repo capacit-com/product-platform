@@ -6,6 +6,7 @@
   import * as amplitude from "@amplitude/analytics-browser";
 
   amplitude.init("4ff9a59e6d16278ed6926a3a4b395676", undefined, {
+    serverZone: "EU",
     defaultTracking: {
       sessions: true,
       pageViews: true,
@@ -23,7 +24,11 @@
       top: anchor.offsetTop - 50,
       behavior: "smooth",
     });
-    amplitude.track(event.currentTarget);
+    console.log(anchorId);
+    amplitude.track(event.currentTarget, {
+      button_text: anchorId,
+      time: new Date(),
+    });
   }
 </script>
 
