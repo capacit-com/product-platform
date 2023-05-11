@@ -56,7 +56,7 @@
         <div class="flex-1">
           <span class="sr-only">Your Company</span>
           <img
-            class="h-32 -mt-8 w-fit"
+            class="h-8 w-fit"
             src={content.header.logo}
             alt="logo"
           />
