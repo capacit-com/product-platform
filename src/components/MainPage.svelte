@@ -36,6 +36,7 @@
   function handleLoginClick(event) {
     event.preventDefault();
     navigate(content.login.url);
+    
     amplitude.track("login-try");
   }
 </script>

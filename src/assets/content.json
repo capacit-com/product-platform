@@ -1,6 +1,6 @@
 {
     "header": {
-        "logo": "/images/logo.svg",
+        "logo": "logo.png",
         "links": [
             {
                 "text": "Features {header.links}",
@@ -13,13 +13,13 @@
         ]
     },
     "login": {
-        "url": "/login",
+        "url": "https://delightful-island-0a8a55903.3.azurestaticapps.net/",
         "redirectUrl": "/"
     },
     "hero": {
         "title": "Welcome to Our SaaS Product {hero.title}",
         "subtitle": "Get started today and see the results for yourself. {hero.subtitle}",
-        "image": "hero-image.png"
+        "image": "image.webp"
     },
     "features": {
         "showFeatures": false,
