@@ -1,5 +1,5 @@
 {
-  "name": "product-templating",
+  "name": "product-platform",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^1.10.3",
-    "@heroicons/react": "^2.0.17"
+    "@heroicons/react": "^2.0.17",
+    "svelte-routing": "^1.8.8"
   }
 }

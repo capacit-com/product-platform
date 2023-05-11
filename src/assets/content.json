@@ -12,6 +12,10 @@
             }
         ]
     },
+    "login": {
+        "url": "/login",
+        "redirectUrl": "/"
+    },
     "hero": {
         "title": "Welcome to Our SaaS Product {hero.title}",
         "subtitle": "Get started today and see the results for yourself. {hero.subtitle}",
