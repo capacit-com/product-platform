@@ -5,7 +5,7 @@
   import * as amplitude from "@amplitude/analytics-browser";
   function handleReturnToLandingPage(event) {
     event.preventDefault();
-    navigate("/");
+    navigate(content.login.redirectUrl);
     amplitude.track("login-try");
   }
 </script>
