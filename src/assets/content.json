@@ -1,6 +1,6 @@
 {
     "header": {
-        "logo": "/images/logo.svg",
+        "logo": "vite.svg",
         "links": [
             {
                 "text": "Features {header.links}",
