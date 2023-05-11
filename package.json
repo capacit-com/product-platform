@@ -19,6 +19,7 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
-    "@amplitude/analytics-browser": "^1.10.3"
+    "@amplitude/analytics-browser": "^1.10.3",
+    "svelte-routing": "^1.8.8"
   }
 }
