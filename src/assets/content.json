@@ -22,7 +22,7 @@
         "image": "image.webp"
     },
     "features": {
-        "showFeatures": false,
+        "showFeatures": true,
         "pretitle": "{feature.pretitle}",
         "title": "Feature title {feature.title}",
         "subtitle": "Feature subtitle {feature.subtitle}",
@@ -50,7 +50,7 @@
         ]
     },
     "solution": {
-        "showSolution": true,
+        "showSolution": false,
         "pretitle": "{solution.pretitle}",
         "title": "{solution.title}",
         "subtitle": "{solution.subtitle}",
@@ -95,7 +95,7 @@
         "inputPlaceHolder": "{newsletter.inputPlaceHolder}"
     },
     "testimonials": {
-        "showTestimonials": true,
+        "showTestimonials": false,
         "pretitle": "{testimonials.pretitle}",
         "title": "{testimonials.title}",
         "testimonial0": {
@@ -130,7 +130,7 @@
         }
     },
     "pricing": {
-        "showPricingSection": true,
+        "showPricingSection": false,
         "pretitle": "{pricing.pretitle}",
         "title": "{pricing.title}",
         "subtitle": "{pricing.subtitle}",
