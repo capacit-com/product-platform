@@ -3,12 +3,8 @@
         "logo": "logo.png",
         "links": [
             {
-                "text": "Features {header.links}",
+                "text": "Features",
                 "sectionLink": "features"
-            },
-            {
-                "text": "Pricing {header.links}",
-                "sectionLink": "pricing"
             }
         ]
     },
@@ -17,35 +13,35 @@
         "redirectUrl": "/"
     },
     "hero": {
-        "title": "Welcome to Our SaaS Product {hero.title}",
-        "subtitle": "Get started today and see the results for yourself. {hero.subtitle}",
+        "title": "TracedAI - Transforming Surveillance into Intelligent Insights",
+        "subtitle": "Empowering Retail with Precision Crowd Analytics & Demographic Insights from Your Existing Surveillance Footage",
         "image": "image.webp"
     },
     "features": {
         "showFeatures": true,
-        "pretitle": "{feature.pretitle}",
-        "title": "Feature title {feature.title}",
-        "subtitle": "Feature subtitle {feature.subtitle}",
+        "pretitle": "Features",
+        "title": "Unprecedented Visibility with Advanced AI Analytics",
+        "subtitle": "Unlock the Full Potential of Your Surveillance Systems, Glean Crucial Data, Make Smarter Decisions",
         "features": [
             {
-                "title": "Feature 0 {features.features[0].title}",
-                "description": "{features.features[0].description}",
-                "icon": "{features.features[0].icon}"
+                "title": "Real-Time Crowd Counting",
+                "description": "Accurately quantify the number of visitors at any given time. Optimize staffing, operations, and emergency response with real-time data.",
+                "icon": "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
             },
             {
-                "title": "Feature 1 {features.features[1].title}",
-                "description": "{features.features[1].description}",
-                "icon": "{features.features[1].icon}"
+                "title": "Demographic Analytics",
+                "description": "Understand your audience better. Our advanced AI models provide accurate age and gender distribution data for your visitors.",
+                "icon": "M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
             },
             {
-                "title": "Feature 2 {features.features[2].title}",
-                "description": "{features.features[2].description}",
-                "icon": "{features.features[2].icon}"
+                "title": "Seamless Integration",
+                "description": "Integrates effortlessly with your existing surveillance infrastructure. No new hardware needed; we make your current system smarter.",
+                "icon": "M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
             },
             {
-                "title": "Feature 3 {features.features[3].title}",
-                "description": "{features.features[3].description}",
-                "icon": "{features.features[3].icon}"
+                "title": "Data-Driven Decisions",
+                "description": "Turn raw surveillance footage into actionable insights. Make data-driven decisions to improve customer experience and boost your bottom line.",
+                "icon": "M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"
             }
         ]
     },
@@ -89,9 +85,9 @@
         ]
     },
     "newsletter": {
-        "title": "{newsletter.title}",
-        "subtitle": "{newsletter.subtitle}",
-        "buttonText": "{newsletter.buttonText}",
+        "title": "Stay Ahead with TracedAI Insights",
+        "subtitle": "Join our mailing list to receive the latest updates, insights, and special offers from TracedAI, directly in your inbox. Be the first to know about our advancements in AI-powered retail analytics.",
+        "buttonText": "Sign up",
         "inputPlaceHolder": "{newsletter.inputPlaceHolder}"
     },
     "testimonials": {
@@ -172,30 +168,30 @@
         "showFaq": true,
         "questions": [
             {
-                "question": "What is your product?",
-                "answer": "Our product is a cloud-based software as a service (SaaS) platform that helps businesses manage their sales and customer relationship management (CRM) processes more efficiently."
+                "question": "How does TracedAI integrate with my existing surveillance systems?",
+                "answer": "TracedAI seamlessly integrates with most existing surveillance systems. Our solution is designed to work with your current setup, without the need for additional hardware. All we need is access to your video feeds."
             },
             {
-                "question": "How does your product work?",
-                "answer": "Our product offers a variety of features, including lead management, sales forecasting, pipeline tracking, and customer analytics, to help businesses streamline their sales and CRM processes. Users can access the platform through any web browser, and our software is designed to be intuitive and user-friendly."
+                "question": "How accurate is the demographic data from TracedAI?",
+                "answer": "TracedAI leverages state-of-the-art AI models to deliver high-precision demographic data. While no system can guarantee 100% accuracy, our solution has been tested extensively and has consistently achieved industry-leading accuracy rates."
             },
             {
-                "question": "Who is your product designed for?",
-                "answer": "Our product is designed for businesses of all sizes, from small startups to large enterprises, that need a powerful and flexible sales and CRM tool. Our platform is particularly well-suited for businesses that want to manage their sales and customer relationships more efficiently and effectively, without having to invest in expensive on-premise software or hardware."
+                "question": "Is TracedAI compliant with privacy regulations?",
+                "answer": "Yes, TracedAI is designed to be fully compliant with privacy regulations. Our solution processes video data in real time and does not store personal identifying information. We prioritize privacy and data protection in all aspects of our operations."
             },
             {
-                "question": "What are some of the benefits of using your product?",
-                "answer": "Some of the key benefits of using our product include increased efficiency and productivity, better tracking and management of leads and sales, improved customer relationships, and access to valuable insights and analytics. Our platform is designed to help businesses save time and money, while also providing them with the tools they need to succeed in today's competitive marketplace."
+                "question": "How can TracedAI help improve my retail operations?",
+                "answer": "TracedAI provides you with actionable insights about your visitor traffic and demographics, helping you make data-driven decisions. This can help you optimize staffing, plan marketing strategies, improve customer experiences, and ultimately increase revenue."
             },
             {
-                "question": "What kind of support do you offer for your product?",
-                "answer": "We offer a variety of support options for our product, including email support, phone support, and online chat support. Our support team is available 24/7 to answer questions, provide guidance, and help users get the most out of our platform. We also offer a comprehensive knowledge base and online documentation to help users troubleshoot common issues and learn more about our software."
+                "question": "What support is available for TracedAI users?",
+                "answer": " TracedAI offers comprehensive customer support to ensure smooth operations. We have a dedicated team of technical experts available to assist you with any issues or questions you may have about our solution."
             }
         ]
     },
     "endSalesPoint": {
-        "title": "{endSalesPoint.title}",
-        "subtitle": "{endSalesPoint.subtitle}"
+        "title": "Embrace the Future of Retail with TracedAI",
+        "subtitle": "Make every decision count with precise and real-time crowd analytics. Join the TracedAI community today and turn your surveillance footage into a strategic asset."
     },
     "footer": {
         "copyright": "Copyright Capacit A/S © 2023",
